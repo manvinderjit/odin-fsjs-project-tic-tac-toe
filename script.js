@@ -84,6 +84,13 @@ let Gameboard = (() => {
         _nextSign = 'X';
     }
 
+    const resetButton = document.getElementById('button-reset-game');
+
+    resetButton.addEventListener('click', function (){
+        resetGame();
+        renderGameboard();
+    });
+
     return {
         renderGameboard,
         handleUserTurn
