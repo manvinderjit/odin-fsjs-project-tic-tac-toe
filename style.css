@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: auto;
+    display: grid;
+    
+    height: 100vh;
+}
+
+#container-gameboard {
+    margin: auto;
+    width: 20vw;
+    height: 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    
+}
+
+#container-gameboard > div {  
+    background-color: lightpink;
+    border: 1px;
+    border-style: solid;
+    border-color: palevioletred;
+    font-size: 4em;    
+}
+
+#container-gameboard > div:hover {
+    background-color: lightsteelblue;
+}
