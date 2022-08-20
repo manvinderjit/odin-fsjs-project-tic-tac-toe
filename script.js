@@ -36,8 +36,19 @@ let Gameboard = (() => {
             
         ){            
             return true;
-        } 
-        return false;
+        } else{
+            return(checkForTie() ? "tie" : false)
+        }
+        
+    }
+
+    function checkForTie() {
+        for(let i=0; i<_gameboard.length; i++) {
+            if(_gameboard[i] === null){
+                return false;
+            }
+        }
+        return true;
     }
 
     function handleUserTurn (){        
@@ -53,12 +64,16 @@ let Gameboard = (() => {
     }
     
     function updateGameBoard(_playerSquare) {
-        _gameboard[_playerSquare] = _nextSign;    
-        if(checkWinCondition()){
+        _gameboard[_playerSquare] = _nextSign;   
+        let _result = checkWinCondition(); 
+        if(_result === true){
             let winner = (player1.mark === _nextSign ? player1.name : player2.name);
             alert("We have a winner! " + winner);
             resetGame();
-        }    
+        } else if(_result === "tie") {
+            alert("We have a tie! ");
+            resetGame();
+        }
         else{
             toggleNextSign();
         }
