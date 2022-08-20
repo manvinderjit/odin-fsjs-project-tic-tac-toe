@@ -9,12 +9,24 @@
 </head>
 <body>
     <div id="container">        
-        <div class="container-header">
+        <div id="container-header">
             <h2>Tic Tac Toe by Manvinderjit</h2>
             <h3>Completed as parts of the requirements of The Odin Project under the fullstack Javascript path</h3>
-            <button id="button-reset-game">Reset</button>
+            <div>
+                <button id="button-start-game">Start Game</button>
+                <button id="button-reset-game">Reset Game</button>
+            </div>
+            <div>
+                <label id="label-player1-name" for="player1-name">Player 1</label>
+                <input id="player1-name" type="text" value="Player-1">
+                <label id="label-player2-name" for="player2-name">Player 2</label>
+                <input id="player2-name" type="text" value="Player-2">
+            </div>
+            <div id="game-status">
+                <h3 id="h3-game-status">Enter player names and click start</h3>
+            </div>
         </div>
-        <div id="container-gameboard">
+        <div id="container-gameboard" class="container-gameboard-disabled">
             <div id="1" class="playSquare"></div>
             <div id="2" class="playSquare"></div>
             <div id="3" class="playSquare"></div>

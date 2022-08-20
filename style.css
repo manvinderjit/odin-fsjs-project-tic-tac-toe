@@ -10,15 +10,21 @@
     height: 100vh;
 }
 
+#container-header {
+    display: grid;
+    margin: auto;
+    gap: 15%;
+    justify-items: center;    
+}
+
 #container-gameboard {
-    margin: 0 auto;
+    margin: 5% auto;
     width: 25vw;
     height: 25vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 #container-gameboard > div {  
@@ -33,4 +39,23 @@
 
 #container-gameboard > div:hover {
     background-color: lightsteelblue;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: lightpink;    
+    border-radius: 10px;
+    font-weight: 700;
+    
+}
+
+button:hover {
+    background-color:lightsteelblue;
+}
+
+.container-gameboard-disabled {
+    pointer-events: none;
+    opacity: 0.4;
 }
